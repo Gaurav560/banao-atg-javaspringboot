@@ -1,0 +1,10 @@
+#url
+spring.datasource.url=jdbc:postgresql://localhost:5432/banao-atg
+
+#username
+spring.datasource.username=postgre
+
+#password
+spring.datasource.password=Lumia@540
+
+
