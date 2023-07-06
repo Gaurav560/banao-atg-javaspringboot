@@ -1,0 +1,5 @@
+package com.banao.service;
+
+public interface UserService {
+
+}

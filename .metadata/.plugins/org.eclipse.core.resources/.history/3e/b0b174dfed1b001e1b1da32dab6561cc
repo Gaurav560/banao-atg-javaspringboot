@@ -1,0 +1,22 @@
+package com.banao.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.banao.model.UserDetails;
+import com.banao.repository.UserRepository;
+
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private UserRepository userRepo;
+	
+	@Override
+	public UserDetails registerUserDetails(UserDetails userDetails) {
+	
+		return userRepo.save(userDetails);
+	}
+
+	
+	
+	
+}
