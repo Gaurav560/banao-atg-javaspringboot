@@ -19,6 +19,12 @@ public class UserServiceImpl implements UserService {
 		return userRepo.save(userDetails);
 	}
 
+	@Override
+	public boolean checkEmail(String email) {
+		
+		return userRepo.existsByEmail(email);
+	}
+
 	
 	
 	

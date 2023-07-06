@@ -6,7 +6,7 @@ import com.banao.model.UserDetails;
 
 public interface UserRepository  extends JpaRepository<UserDetails,Integer> {
 	
-	
+	public boolean existsByEmail(String email);
 
 	
 }
