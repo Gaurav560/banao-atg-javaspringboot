@@ -1,0 +1,5 @@
+package com.banao.model;
+
+public class UserDetails {
+
+}
