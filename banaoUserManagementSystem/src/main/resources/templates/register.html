@@ -16,6 +16,14 @@
 				<div class="col-md-6 offset-md-3">
 					<div class="card">
 						<div class="card-header text-center fs-2 fw-bold">Register Page</div>
+						
+						<th:block th:if="${session.sucMsg}">
+							
+							<p class="text-center fs-3">[[${session.sucMsg}]]</p>
+					<th:block th:text="${#session.removeAttribute('sucMsg')}"></th:block>
+							
+						</th:block>
+						
 						<div class="card-body">
 
 							<form action="registerUser" method="post">

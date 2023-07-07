@@ -1,0 +1,20 @@
+package com.banao.model;
+
+
+import lombok.Data;
+
+
+@Data
+@Entity
+public class UserDetails {
+
+	@javax.persistence.Id
+	@javax.persistence.GeneratedValue(strategy = javax.persistence.GenerationType.IDENTITY)
+	private int id;
+	private String name;
+	private String email;
+	private String password;
+	private String confirmPassword;
+
+
+}

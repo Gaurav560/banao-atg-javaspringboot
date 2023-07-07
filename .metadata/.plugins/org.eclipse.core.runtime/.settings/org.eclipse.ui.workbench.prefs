@@ -94,6 +94,7 @@ org.eclipse.gef.color.list.selected.background=21,23,25
 org.eclipse.jdt.internal.ui.compare.JavaMergeViewer=1|Consolas|14.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.jdt.internal.ui.compare.PropertiesFileMergeViewer=1|Consolas|14.0|0|WINDOWS|1|0|0|0|0|0|0|0|0|1|0|0|0|0|Consolas;
 org.eclipse.jdt.ui.ColoredLabels.inherited=143,143,191
+org.eclipse.jdt.ui.ColoredLabels.match_highlight=73,83,90
 org.eclipse.jdt.ui.ColoredLabels.writeaccess_highlight=255,128,128
 org.eclipse.jdt.ui.Javadoc.backgroundColor=48,54,59
 org.eclipse.jdt.ui.Javadoc.foregroundColor=235,237,239

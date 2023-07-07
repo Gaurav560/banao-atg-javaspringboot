@@ -1,6 +1,7 @@
 package com.banao.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,6 +9,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import com.banao.model.UserDetails;
 import com.banao.service.UserService;
+
+import jakarta.servlet.http.HttpSession;
+
+
 
 @Controller
 public class HomeController {
@@ -31,20 +36,24 @@ public class HomeController {
 	}
 
 	@PostMapping("/registerUser")
-	public String registerUser(@ModelAttribute UserDetails userDetails) {
+	public String registerUser(@ModelAttribute UserDetails userDetails,HttpSession session) {
 
+		
+		//checking if the email id already registered .
 		boolean f = userService.checkEmail(userDetails.getEmail());
 
 		if (f) {
-			System.out.println("email id already exists.");
+		session.setAttribute("sucMsg", "Email id already existed ..");
 
 		} else {
+			
+			//registering new user details
 			UserDetails userDetails2 = userService.registerUserDetails(userDetails);
 			if (userDetails2 != null) {
-				System.out.println("Details Registered Successfully..");
+				session.setAttribute("sucMsg", " User Registered Successfully..");
 
 			} else {
-				System.out.println("Oops! Something went wrong on the server..");
+				session.setAttribute("sucMsg", "Oooops! Something went wrong on the server..");
 			}
 
 		}
