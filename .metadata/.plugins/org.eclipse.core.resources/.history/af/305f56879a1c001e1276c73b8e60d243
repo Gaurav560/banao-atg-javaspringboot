@@ -1,0 +1,20 @@
+package com.banao.service;
+
+import org.springframework.stereotype.Component;
+
+@Component
+public class SessionHelper {
+
+	public void removeMessageFromSession() {
+		
+		try {
+			
+		} 
+		
+		catch (Exception e) {
+		e.printStackTrace();
+		}
+	}
+	
+	
+}
